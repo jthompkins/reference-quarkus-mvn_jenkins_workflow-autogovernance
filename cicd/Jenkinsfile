@@ -24,7 +24,7 @@ ploigosWorkflowRekor(
     workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.16.0',
     workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.16.0',
 
-    stepRunnerLibSourceUrl: "git+https://github.com/jthompkins/ploigos-step-runner.git@main",
-    stepRunnerUpdateLibrary: true
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: "https://github.com/jthompkins/ploigos-step-runner.git"
 
 )
