@@ -2,11 +2,11 @@
 library identifier: 'ploigos-jenkins-library@v0.17.0',
 retriever: modernSCM([
     $class: 'GitSCMSource',
-    remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
+    remote: 'https://github.com/jthompkins/ploigos-jenkins-library.git'
 ])
 
 // run the pipeline
-ploigosWorkflowStandard(
+ploigosWorkflowRekor(
     stepRunnerConfigDir: 'cicd/ploigos-step-runner-config/',
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
 
@@ -23,4 +23,8 @@ ploigosWorkflowStandard(
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.16.0',
     workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.16.0',
     workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.16.0'
+
+    stepRunnerLibSourceUrl: "git+https://github.com/jthompkins/ploigos-step-runner.git@main",
+    stepRunnerUpdateLibrary: true
+
 )

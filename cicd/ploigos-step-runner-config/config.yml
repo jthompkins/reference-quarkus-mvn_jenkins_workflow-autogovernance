@@ -56,6 +56,14 @@ step-runner-config:
     config:
       destination: localhost/tssc-reference-app-quarkus-rest-json
 
+  automated-governance:
+  - implementer: Rekor
+    config:
+      rekor-server: http://rekor.apps.tssc.rht-set.com
+      gpg-key: /var/pgp-private-keys/gpg_public_key
+      gpg-user: tssc-service-account@redhat.com
+ 
+
   push-container-image:
   - implementer: Skopeo
     config:
